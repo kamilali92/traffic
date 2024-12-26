@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Accident Severity Predictor</title>
+</head>
+<body>
+    <h1>Traffic Accident Severity Predictor</h1>
+    <form method="POST" action="/predict">
+        <label for="weather_condition">Weather Condition (0 = Clear, 1 = Rain, etc.):</label>
+        <input type="text" id="weather_condition" name="weather_condition" required><br>
+
+        <label for="Humidity(%)">Road Condition (0 = Dry, 1 = Wet, etc.):</label>
+        <input type="text" id="Humidity(%)" name="Humidity(%)" required><br>
+
+        <label for="temperature">Temperature (°C):</label>
+        <input type="text" id="temperature" name="temperat
+        <label for="visibility">Visibility (in meters):</label>
+        <input type="text" id="visibility" name="visibility" required><br>
+
+        <button type="submit">Predict Severity</button>
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
